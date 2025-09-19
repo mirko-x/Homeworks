@@ -1,0 +1,21 @@
+jigsaw funzione come la nota serie di successo "SAW" vi fara soffrire ma la soluzione è 
+dietro di voi non dermodete sara cosi banale che vi pentirete a rinunciare non aggiungo 
+altro senno mi censurano XD . HA in input l'immagine criptata e l'immagine originale 
+per ora ci concentreremo solo su questo. L'obbiettivo è caricare le due immagini , 
+calcolare w,h indifferentemente essendo uguali per ognuna capire di dover setacciare 
+per riga e per colonne da 0 a h,w rispettivamente avanzando a passi di tile_size 
+(dimensione quadrato NO TASSELLO per renderlo facile) creare con slicing(considerare 
+che ogni riga slicerata dell 'immagine dovra essere contenuta nel quadrato slicerato 
+(DOPPIO SLICING IN UN DOPPIO FOR ) il quadrato criptato e originale allo stesso modo. 
+Ora se tassello 1 == tassello 2 non devo ruotare un bel niente return N altrimenti 
+chiamo la funzione rotate , prima flippa (il meno costoso considerare di invertire ogni 
+riga e infine invertire il tutto ALTRIMENTI C'E LO SPECCHIO E NON VABENE. ALTRIMENTI 
+verifica il ruotamento a sx o dx come da lezione di sterbini; Rispettivamente se è 
+falso il confronto con il tassello originale restituire l' altra KEY Non ho chance è 
+quello(NON VOGLIO FARE INUTILI CONFRONTI) Agiungere ogni insieme di chiavi alla lista 
+quindi quando finisce il ciclo di setaccio quadrati . ORA SI PUO convertire la lista in 
+stringa (ci serviranno due copie una da restituire l'altra (stringa) per lavorare sui 
+file . ora diventa un hw4 bisogna aprire il testo criptato convertirlo in lista di 
+caratteri singoli qua bisogna sostituire in base alla chiave nella posizione di i 
+modulo keylen scrivere su file una volta fatte tutte le sostituzioni
+
