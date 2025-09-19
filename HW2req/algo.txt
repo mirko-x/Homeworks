@@ -1,0 +1,33 @@
+La prima funzione decode digits prende in input due liste di interi e 
+vuole in ouput un intero ,si può osservare che devono avere la stessa 
+dimensione e la lunghezza di una sola rappresenta l'indice per 
+cominciare a moltiplicare gli interi. Dunque fondere in unica lista e 
+scorrere con due indici finche uno dei due (indifferente) raggiunga n o 
+2n( si puo fare anche con una funzione specifica zip o considerando 
+sempre un ciclo fino ad n un unico indice "i" che accede a entrambi gli 
+elem richiesti e la potenza quest' ultimo il piu veloce ). La seconda 
+funzione generate digits input bases, ouput lista di liste di 
+combinazioni generate in base a bases, richiede per tutti i casi di 
+lunghezza un algoritmo generale ..ma quando len lista <=1 è 
+consigliabile fare il caso separato per ridurre il costo computazionale 
+, per il generale si osserva dato bases 3,4,5 -> 0,0,1.....0,0,4 reset 
+0,1,0......0,1,4 reset... 0,3,4 reset 1,0,0 a priori l'ultimo elem è 
+incrementato, serve un altro indice per capire quando fare reset che 
+comporta anche un incremento dell' elemento precedente per non andare 
+incontro a duplicati osservabile nell' esempio 0,0,4 che si rischia di 
+ritornare in 0,0,0 chiaramente la condizione di uscita di tutto è l' 
+elemento in posizione 0 a priori confrontato con bases in pos 0 , se 
+uguali ho finito. (si puo partire anche con 2,3,4 ma lo sconsiglio). 
+Infine l' ultima funzione si tratta di capire cosa si è fatto fino ad 
+ora e collegare tra loro le funzioni precedenti per avere l'insieme di 
+interi notare che bases è sempre l'input e mai ne dobbiamo intervenire 
+su di esso. Quindi ogni lista di combinazioni servirà insieme a bases in 
+input a decodificare e ottenere l'intero cercato funzione svolta da 
+decode digits. L'ultimo passaggio è banale e si deve verificare 
+l'occorenza di ogni intero se >1 lo prendiamo e lo inseriamo in un set 
+insieme.Possiamo ora analizzare i costi: Decode digits impiega un tempo 
+theta(n), Generate digits molto dipende dal tipo di algoritmo sviluppato 
+supponendo il precedente  con [2,2,2] sia hanno 8 comb [3,2] e [2,3] 6 comb 
+[4,4,4,4]= 256 [2,4,5,6] =2*4*5*6 comb ...[k1,k2.....kn]= k^n
+Pertanto O(k^n) dove si presume che k sia una costante intera e n la
+dimensione della lista Decodificare invece ogni combinazione ha complessità O(n^2).
