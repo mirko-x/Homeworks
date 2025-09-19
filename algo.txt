@@ -1,0 +1,38 @@
+La funzione Ukmanasize prende in input source root e target root che 
+rispettivamente contengono il path dei file di lettura e scrittura con 
+cui bisogna lavorare. Inizio a considerare index.txt che va letto con 
+input source per creare il nostro dizionario di titoli e path con 
+qualche split e sprip per ogni riga in file otteniamo key=titolo 
+value=path facendo attenzione agli apici (considerare '"' o viceversa 
+altrimenti va in errore e lo split per " "). Una volta ottenuto itero 
+ogni titolo path e mi creo il percorso di destinazione senza creare il 
+file txt grazie alla libreria os. Adesso è il momento dell' algoritmo 
+apro ogni file con source root e path del valore dizionario precedente , 
+e rimanendo sempre nel for titolo path precedente ottengo la giusta 
+apertura e lettura. Leggo il testo sostituisco "0123456+- " con i char 
+corretti . Leggo ogni riga splittata da "\n" e aggiungo alla lista il 
+risultato della funzione. La funzione che chiameremo "traduzione" prende 
+in input la riga e restituisce la riga in stringa se non ci sono 
+biemolle diesis ma invertita con slicing (che comunque viene trasformata 
+in lista con += dopo la chiamata alla funzione) altrimenti verra sempre 
+invertita ma creiamo una lista vuota e per ogni char della riga gli 
+aggiungo l'elemento se il prossimo char non è b o # ,se lo è invece 
+prendo l'ultimo carattere nella lista e lo unisco con b o . Ora avremo 
+una lista delle note in ogni caso e la lunghezza di essa ci servira per 
+il nostro dizionario da restituire e per scriverlo nell'index 
+decodificato (osserva che l' index non è mai in sub directory nel test 
+expected). Ora dobbiamo scrivere nel path corretto unione di target root 
+e il path del dizionario iniziale + titolo + ".txt". lo faremo con write 
+e chiamando la funzione occorrenze(note) che ha in input la lista 
+precedente, Qui dovremo creare una nuova stringa e per ogni elemento 
+della lista note se uguale al successivo aumentiamo un contatore 
+altrimenti aggiungo l'elemento con il contatore e resetto il contatore a 
+1. Aggiungere anche l'ultimo elemento + contatore escluso dal for in 
+range. Infine dobbiamo ordinare il dizionario titolo durata per durata 
+decrescente e titolo crescente in caso di parità, scriverlo sul percorso 
+target root come da osservazione precedente non è in sottocartelle 
+aggiungere estensione index.txt ( per scrivere si consideri un ciclo per 
+ogni coppia di tuple ottenuto dal dizionario items ordinato, 
+formattandolo correttamente con f'{}{}\n') . Infine quello che noi 
+stiamo scrivendo lo dobbiamo restituire dalla funzione Ukmanasize ma 
+senza ordinarlo e formattarlo dovra restare semplicemente dizionario.
