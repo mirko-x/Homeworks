@@ -16,7 +16,7 @@ COPYRIGHT
 Copyright (C) 2019- Andrea Sterbini
     
 					
-Copyright (C) 2025-  Mirko Scovacricchi
+Copyright (C) 2024-  Mirko Scovacricchi
 
 Tutti i programmi ed i file contenuti in questo archivio/directory sono rilasciati sotto licenza GPL v.3
 Le modifiche e soluzioni aggiunte da Mirko Scovacricchi sono anch'esse rilasciate sotto licenza GPL v.3
