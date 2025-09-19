@@ -13,7 +13,7 @@ pip install ddt pytest-timeout stopit pytest-profiling radon typeguard
 
 COPYRIGHT
 =========
-Copyright (C) 2019- Andrea Sterbini
+Copyright (C) 2019- Andrea Sterbini and Others Contributors
     
 					
 Copyright (C) 2024-  Mirko Scovacricchi
